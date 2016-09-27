@@ -8,7 +8,7 @@ import babel from 'gulp-babel';
 gulp.task('hbs', function () {
     return gulp.src('**/*.hbs')
         .pipe(ractive())
-        .pipe(wrap('export default <%= contents %>;\n'))
+        .pipe(wrap('export default <%= contents %>;\n\n'))
         .pipe(rename({extname: '.hbs.js'}))
         .pipe(gulp.dest('./'));
 });
