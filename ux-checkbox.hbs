@@ -1,11 +1,11 @@
-<div class="ux-todo">
-    <h1>TODOs</h1>
-    <ul>
-        {{#each todos:index}}
-        <li>
-            <div class="name">{{.name}}</div>
-            <div class="value">{{.value}}</div>
-        </li>
-        {{/each}}
-    </ul>
-</div>
+<fieldset class="ux-checkbox">
+    {{#if legend }}
+    <legend>{{legend}}</legend>
+    {{/if}}
+    <label for="{{name}}">{{label}}</label>
+    <input
+        type="checkbox"
+        name="{{name}}"
+        checked="{{checked}}"
+    />
+</fieldset>

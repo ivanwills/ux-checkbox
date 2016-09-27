@@ -14,15 +14,14 @@ gulp.task('hbs', function () {
 });
 
 gulp.task('bundle', ['hbs'], function () {
-    return gulp.src('ux-todo.js')
+    return gulp.src('ux-checkbox.js')
         .pipe(rollup({
-            entry: './ux-todo.js',
-            moduleName: 'uxToDo',
+            entry: './ux-checkbox.js',
+            moduleName: 'uxCheckbox',
             globals: {
                 Ractive: 'Ractive'
             },
-            format: 'umd',
-            allowRealFiles: true
+            format: 'umd'
         }))
         .pipe(babel({
             "presets": ["es2015"]

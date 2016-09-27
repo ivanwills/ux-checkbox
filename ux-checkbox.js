@@ -1,20 +1,14 @@
-import template from './ux-todo.hbs.js';
+import template from './ux-checkbox.hbs.js';
 
 export default Ractive.extend({
     template: template,
     isolated: true,
     data: () => {
         return {
-            todos: [
-                {
-                    name : 'Milk',
-                    value: 'Get the milk'
-                }
-            ]
         };
     },
     oninit: function () {
-        this.observe('todos', (newValue) => {
+        this.observe('checked', (newValue) => {
             console.log(newValue);
         });
     }

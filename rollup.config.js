@@ -1,9 +1,9 @@
 //import babel from 'rollup-plugin-babel';
 
 export default {
-    entry: 'ux-todo.js',
+    entry: 'ux-checkbox.js',
     //plugins: [ babel() ],
-    moduleName: 'uxToDo',
+    moduleName: 'uxCheckbox',
     globals: {
         Ractive: 'Ractive'
     },
