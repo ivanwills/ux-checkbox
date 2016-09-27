@@ -14,7 +14,7 @@ gulp.task('hbs', function () {
 });
 
 gulp.task('bundle', ['hbs'], function () {
-    return gulp.src('ux-checkbox.js')
+    return gulp.src('ux-checkbox*.js')
         .pipe(rollup({
             entry: './ux-checkbox.js',
             moduleName: 'uxCheckbox',
