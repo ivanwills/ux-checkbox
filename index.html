@@ -6,7 +6,10 @@
     </head>
     <body>
         <div id="checkbox">
-            <ux-checkbox />
+            <ux-checkbox
+                label="A checkbox"
+                checked="{{mychecked}}"
+            />
         </div>
         <script type="text/javascript">
 Ractive.components['ux-checkbox'] = uxCheckbox;
@@ -14,6 +17,11 @@ console.log(uxCheckbox);
 var checkbox = new Ractive({
     el: '#checkbox',
     template: document.getElementById('checkbox').innerHTML,
+    data: function () {
+        return {
+            mychecked: true
+        }
+    },
     onrender: function () {
         console.log(this.get());
     }
