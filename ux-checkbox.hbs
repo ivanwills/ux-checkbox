@@ -2,7 +2,13 @@
     {{#if legend }}
     <legend>{{legend}}</legend>
     {{/if}}
-    <label for="{{name}}">{{label}}</label>
+    <label for="{{name}}">
+        {{#if label}}
+            {{label}}
+        {{else}}
+            {{yield}}
+        {{/if}}
+    </label>
     <input
         type="checkbox"
         id="{{id}}"
