@@ -1,16 +1,24 @@
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript" src="./node_modules/ractive/ractive.js"></script>
-        <script type="text/javascript" src="./index.js"></script>
-        <script type="text/javascript">
-new Ractive({
-    el: '#checkbox'
-});
-        </script>
+        <script type="text/javascript" src="./index.umd.js"></script>
     </head>
     <body>
         <div id="checkbox">
             <ux-checkbox />
         </div>
+        <script type="text/javascript">
+Ractive.components['ux-checkbox'] = uxCheckbox;
+console.log(uxCheckbox);
+var checkbox = new Ractive({
+    el: '#checkbox',
+    template: document.getElementById('checkbox').innerHTML,
+    onrender: function () {
+        console.log(this.get());
+    }
+});
+console.log(checkbox);
+        </script>
     </body>
 </html>
