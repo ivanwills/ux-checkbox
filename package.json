@@ -2,7 +2,7 @@
   "name": "ux-checkbox",
   "version": "0.0.1",
   "description": "A small RactiveJS Checkbox component",
-  "main": "ux-checkbox.js",
+  "main": "src/ux-checkbox.js",
   "scripts": {
     "test": "gulp test"
   },

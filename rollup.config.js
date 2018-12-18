@@ -1,7 +1,7 @@
 //import babel from 'rollup-plugin-babel';
 
 export default {
-    entry: 'ux-checkbox.js',
+    entry: 'src/ux-checkbox.js',
     //plugins: [ babel() ],
     moduleName: 'uxCheckbox',
     globals: {

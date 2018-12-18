@@ -15,9 +15,9 @@ gulp.task('hbs', function () {
 });
 
 gulp.task('build', ['hbs'], function () {
-    return gulp.src('ux-checkbox*.js')
+    return gulp.src('src/ux-checkbox*.js')
         .pipe(rollup({
-            entry: './ux-checkbox.js',
+            entry: './src/ux-checkbox.js',
             moduleName: 'uxCheckbox',
             globals: {
                 Ractive: 'Ractive'
@@ -32,7 +32,7 @@ gulp.task('build', ['hbs'], function () {
 });
 
 gulp.task('default', function () {
-    return watch(['**/*.hbs', 'ux-checkbox*.js'], function () {
+    return watch(['**/*.hbs', 'src/ux-checkbox*.js'], function () {
        return gulp.tasks[build]();
    });
 });
